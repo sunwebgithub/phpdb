@@ -26,8 +26,7 @@ if (!$link) {
     die('Could not connect: ' . mysql_error());
 }
 echo 'Connected successfully';
-mysql_close($link);
-$db = mysql_select_db("guestbook");
+$link = mysql_select_db("guestbook");
 
 $qinfo = getquery("entries","","*");
 ?>
